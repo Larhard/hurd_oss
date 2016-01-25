@@ -4,6 +4,12 @@ AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/oss.c])
 AC_CONFIG_HEADERS([config.h])
 
+AC_ARG_WITH([hurddir],
+			[AS_HELP_STRING([--with-hurddir=DIR], [hurd translators dir])],
+			[hurddir=$withval],
+			[hurddir="\${exec_prefix}/hurd"])
+AC_SUBST([hurddir], [$hurddir])
+
 # Checks for programs.
 AC_PROG_CC
 AC_PROG_INSTALL
