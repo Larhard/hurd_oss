@@ -1,0 +1,9 @@
+To build execute:
+
+	$ autoreconf --install
+	$ ./configure
+	$ make
+
+An then to install, execute:
+
+	$ make install
